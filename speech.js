@@ -43,8 +43,9 @@ function speechRec() {
   
   console.log('Confidence: ' + event.results[current][0].confidence);
   }
-
-  recognition.speechend = function() {
+//for these .events with the on you can also add an eventlistener with the event as an 
+//argument such .addeventlistener('speechend', function)
+  recognition.onspeechend = function() {
     instructions.innerHTML = "Click the Start button";
     recognition.stop();
     
@@ -54,44 +55,44 @@ function speechRec() {
     console.log('SpeechRecognition.onerror')
   }
   
-  recognition.audiostart = function(event) {
+  recognition.onaudiostart = function(event) {
       //Fired when the user agent has started to capture audio.
       console.log('SpeechRecognition.onaudiostart');
   }
   
-  recognition.audioend = function(event) {
+  recognition.onaudioend = function(event) {
       //Fired when the user agent has finished capturing audio.
       console.log('SpeechRecognition.onaudioend');
   }
   
-  recognition.end = function(event) {
+  recognition.onend = function(event) {
       //Fired when the speech recognition service has disconnected.
       console.log('SpeechRecognition.onend');
       recognition.stop();
   }
   
-  recognition.nomatch = function(event) {
+  recognition.onnomatch = function(event) {
       //Fired when the speech recognition service returns a final result with no significant recognition. This may involve some degree of recognition, which doesn't meet or exceed the confidence threshold.
       console.log('SpeechRecognition.onnomatch');
 
   }
   
-  recognition.soundstart = function(event) {
+  recognition.onsoundstart = function(event) {
       //Fired when any sound — recognisable speech or not — has been detected.
       console.log('SpeechRecognition.onsoundstart');
       
   }
   
-  recognition.soundend = function(event) {
+  recognition.onsoundend = function(event) {
       //Fired when any sound — recognisable speech or not — has stopped being detected.
       console.log('SpeechRecognition.onsoundend');
   }
   
-  recognition.speechstart = function (event) {
+  recognition.onspeechstart = function (event) {
       //Fired when sound that is recognised by the speech recognition service as speech has been detected.
       console.log('SpeechRecognition.onspeechstart');
   }
-  recognition.start = function(event) {
+  recognition.onstart = function(event) {
       //Fired when the speech recognition service has begun listening to incoming audio with intent to recognize grammars associated with the current SpeechRecognition.
       console.log('SpeechRecognition.onstart');
       instructions.innerHTML = 'Voice recognition is ON. Start Speaking';
