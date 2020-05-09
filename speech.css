@@ -1,0 +1,56 @@
+
+body {
+  background: #23a9c7;
+  color: #f2efe2;
+  font-size: 16px;
+  position: center;
+}
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+button:focus {
+    outline: 0;
+    
+}
+
+.mycontainer {
+    margin-top: 100px;
+    text-align: center;
+}
+
+
+#textbox {
+    color: black;
+    
+}
+
+@media (max-width: 768px) {
+  .mycontainer {
+    width: 85vw;
+    max-width: 85vw;
+  }
+
+    button {
+        margin-bottom: 10px;
+        
+          background-color: #4CAF50; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+        
+
+    }
+}
