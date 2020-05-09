@@ -1,3 +1,4 @@
+//this api only works on chrome and firefox
 try {
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
